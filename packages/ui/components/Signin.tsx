@@ -9,7 +9,7 @@ export const Signin = (props: {
   const [password, setPassword] = useState("");
   return (
     // MAIN DIV
-    <div style={{ paddingTop: "150px" }}>
+    <div style={{ paddingTop: "150px" }} className="bg-black">
       <center>
         <div style={{}}>
           <Typography>Welcome to Coursera. Sign up below</Typography>
