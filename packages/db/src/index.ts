@@ -4,7 +4,7 @@ import mongoose from "mongoose";
 const userSchema = new mongoose.Schema({
   username: { type: String },
   password: { type: String },
-  purchasedCourses: [{ type: mongoose.Schema.Types.ObjectId, ref: "Course" }],
+  purchasedItems: [{ type: mongoose.Schema.Types.ObjectId, ref: "Course" }],
 });
 
 // ADMIN SCHEMA
@@ -14,7 +14,7 @@ const adminSchema = new mongoose.Schema({
 });
 
 // COURSES SCHEMA
-const courseSchema = new mongoose.Schema({
+const ItemSchema = new mongoose.Schema({
   title: { type: String },
   description: { type: String },
   price: { type: Number },
@@ -25,11 +25,7 @@ const courseSchema = new mongoose.Schema({
 // MODELS OF USER < ADMIN < COURSE
 const User = mongoose.model("User", userSchema);
 const Admin = mongoose.model("Admin", adminSchema);
-const Course = mongoose.model("Course", courseSchema);
+const Item = mongoose.model("Course", ItemSchema);
 
 // MODULE EXPORT
-module.exports = {
-  User,
-  Admin,
-  Course,
-};
+export { User, Admin, Item };
