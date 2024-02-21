@@ -6,6 +6,6 @@ export default function ensureDbConnected() {
   }
   alreadyDone = true;
   mongoose.connect(
-    "mongodb+srv://sandeepyadav24:MG5E4VTaQ0ZH5VKt@cluster0.wgmwmtd.mongodb.net/"
+    "mongodb+srv://sandeepyadav004343:2F1iskoQwDR3pS0F@cluster0.npjhskg.mongodb.net/"
   );
 }
